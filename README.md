@@ -1,10 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Fullstack Developer - Portfolio Landing
 
-## Getting Started
+Персональный portfolio-лендинг, разработанный с использованием Next.js и TypeScript.
 
-First, run the development server:
+## Preview
 
-```bash
+![Preview](./README-assets/lending.png)
+
+Чтобы запустить проект используйте:
+
 npm run dev
 # or
 yarn dev
@@ -12,25 +15,121 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Создать файл .env.local и добавить свои ключи API:
+OPENAI_API_KEY=your_openai_key
+RESEND_API_KEY=your_resend_key
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере, чтобы просмотреть лендинг.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# Используемый стек
 
-To learn more about Next.js, take a look at the following resources:
+Frontend:
+- Next.js 16
+- React
+- TypeScript
+- TailwindCSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Backend / API:
+- Next.js Route Handlers
+- REST API
+- Zod validation
+- Resend email API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+AI:
+- OpenAI API (gpt-4.o-mini)
+- AI-generated text helper
 
-## Deploy on Vercel
+Инструменты:
+- Git
+- npm
+- Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Реализация контактной формы
+
+Форма включает:
+
+- управление состоянием формы на frontend
+- backend-валидацию через Zod
+- обработку запросов через API route
+- loading и error состояния
+- отправку email через Resend API
+
+После успешной отправки:
+- сообщение отправляется владельцу сайта
+- пользователю отправляется confirmation email
+
+Валидация реализована на backend через Zod-схемы.
+
+## Форма
+
+![Preview](./README-assets/contacts.png)
+
+## Сообщение и доставка
+
+![Preview](./README-assets/send.png)
+![Preview](./README-assets/message.png)
+
+---
+
+# AI-интеграция
+
+Проект включает простую AI-интеграцию через OpenAI API.
+
+AI-блок демонстрирует:
+- работу с внешним API
+- обработку асинхронных запросов
+- взаимодействие frontend ↔ backend
+- генерацию AI-ответов
+
+## AI-демо
+
+![Preview](./README-assets/ai_demo.png)
+
+---
+
+# Какие AI-инструменты использовались
+
+AI-инструменты использовались для:
+- проектирования архитектуры проекта
+- идей по UI-структуре
+- организации компонентов
+- проектирования validation flow
+- отладки и поиска ошибок
+
+---
+
+# Что дорабатывалось вручную
+
+Во время разработки вручную были доработаны и исправлены:
+
+- адаптивный layout
+- консистентность spacing и typography
+- UX контактной формы
+- отображение validation ошибок
+- визуальная иерархия секций
+- структура контента
+- обработка API ошибок
+
+---
+
+# Структура проекта
+
+```bash
+src/
+ ├── app/
+ │    ├── api/
+ │    ├── page.tsx
+ │    └── layout.tsx
+ │
+ ├── components/
+ │    ├── sections/
+ │    ├── layout/
+ │    └── ui/
+ │
+ └── lib/
+      └── validators.ts
