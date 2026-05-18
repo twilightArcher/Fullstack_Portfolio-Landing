@@ -140,7 +140,7 @@ export default function ContactSection() {
         {/* GLOBAL STATUS */}
         {status === "success" && (
           <p className="text-green-400">
-            Message sent successfully
+            Thank you for your message. I will get back to you within 3 work days
           </p>
         )}
 

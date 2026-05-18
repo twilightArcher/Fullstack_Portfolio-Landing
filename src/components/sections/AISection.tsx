@@ -35,7 +35,7 @@ export default function AISection() {
   return (
     <section id="ai" className="py-20 border-b border-white/10">
       <h2 className="text-2xl font-semibold mb-6">
-        AI Assistant
+        AI-assistant
       </h2>
 
       <div className="space-y-4">

@@ -3,7 +3,7 @@ export default function HeroSection() {
       <section className="py-32">
         <div className="space-y-6">
           <p className="text-white/50">
-            Available for freelance / internships / CDI
+            Available for full-time / part-time / freelance 
           </p>
   
           <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
@@ -13,7 +13,7 @@ export default function HeroSection() {
           </h1>
   
           <p className="text-white/60 max-w-2xl text-lg">
-            Fullstack Developer / AI Engineer with strong Python and backend engineering skills, experienced in AI API integrations, backend architectures.
+            Fullstack Developer / AI Engineer with strong Python and backend engineering skills, experienced in API integrations, backend architectures.
             Currently studying machine learning and deep learning, with hands-on experimentation in AI workflows and automation tools.
           </p>
           

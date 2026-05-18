@@ -2,7 +2,7 @@ export default function ProjectsSection() {
     return (
       <section id="projects" className="py-20 border-b border-white/10">
         <h2 className="text-2xl font-semibold tracking-tight mb-10">
-          Technical Projects
+          Projects
         </h2>
   
         <div className="space-y-12 text-white/70 leading-relaxed">
